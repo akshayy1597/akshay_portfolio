@@ -14,27 +14,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
+        /* Custom styles to match the reference site */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a192f;
-            color: #ccd6f6;
+            background-color: #0a192f; /* Dark navy background */
+            color: #ccd6f6; /* Light text */
         }
-        .text-accent { color: #64ffda; }
-        .bg-accent { background-color: #64ffda; }
-        .border-accent { border-color: #64ffda; }
-        .outline-accent { outline-color: #64ffda; }
-        .text-light { color: #8892b0; }
-        .bg-card { background-color: #112240; }
-        .nav-link.active { color: #64ffda; }
-        .nav-link { transition: color 0.3s ease; }
-        .nav-link:hover { color: #64ffda; }
-        .timeline-item { position: relative; padding-left: 30px; border-left: 2px solid #233554; }
-        .timeline-item:before { content: ''; position: absolute; left: -8px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background-color: #64ffda; border: 2px solid #0a192f; }
-        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Accent color */
+        .text-accent {
+            color: #64ffda; /* Mint green accent */
+        }
+        .bg-accent {
+            background-color: #64ffda;
+        }
+        .border-accent {
+            border-color: #64ffda;
+        }
+        .outline-accent {
+            outline-color: #64ffda;
+        }
+        
+        /* Lighter text for descriptions */
+        .text-light {
+            color: #8892b0;
+        }
+
+        /* Custom card background */
+        .bg-card {
+            background-color: #112240; /* Lighter navy for cards */
+        }
+
+        /* Active nav link style */
+        .nav-link.active {
+            color: #64ffda;
+        }
+        
+        /* Hover effect for links */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #64ffda;
+        }
+
+        /* Timeline styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #233554; /* Timeline track */
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #64ffda; /* Timeline dot */
+            border: 2px solid #0a192f;
+        }
+
+        /* Reveal on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="leading-relaxed">
@@ -46,6 +100,7 @@
             <a href="#home" class="text-2xl font-bold text-accent border-2 border-accent rounded-md w-10 h-10 flex items-center justify-center">
                 A
             </a>
+            
             <!-- Desktop Nav -->
             <div class="hidden md:flex space-x-6 items-center">
                 <a href="#about" class="nav-link font-medium text-light">About</a>
@@ -55,6 +110,7 @@
                 <a href="#education" class="nav-link font-medium text-light">Education</a>
                 <a href="#contact" class="nav-link font-medium text-light">Contact</a>
             </div>
+            
             <!-- Mobile Nav Button (Basic) -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-accent text-2xl">
@@ -62,6 +118,7 @@
                 </button>
             </div>
         </div>
+        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-card p-6">
             <a href="#about" class="nav-link-mobile block py-2 text-light">About</a>
@@ -76,9 +133,9 @@
     <!-- Main Content -->
     <main class="container mx-auto max-w-6xl px-6">
 
-        <!-- Section 1: Home (profile photo aligned right of name/info)-->
+        <!-- Section 1: Home -->
         <section id="home" class="h-screen flex flex-col md:flex-row items-center justify-center min-h-[700px]">
-            <!-- Left: Name/Title/Text/Social -->
+            <!-- Left: Name, subtitle, summary, socials -->
             <div class="flex-1 flex flex-col items-start justify-center">
                 <h1 class="text-5xl md:text-7xl font-bold text-accent mb-4 reveal">Akshay Katageri</h1>
                 <h2 class="text-3xl md:text-5xl font-bold text-light mb-8 reveal" style="transition-delay: 100ms;">Generative AI Engineer</h2>
@@ -97,15 +154,15 @@
                     </a>
                 </div>
             </div>
-            <!-- Right: Profile Picture -->
+            <!-- Right: Profile Picture (aligned) -->
             <div class="flex-1 flex justify-center items-center mt-12 md:mt-0">
-                <div class="w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent shadow-lg">
-                    <img src="profile-picture.jpg" alt="Akshay Katageri" class="w-full h-full object-cover">
+                <div class->"w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent shadow-lg">
+                    <img src="https://placehold.co/320x320/112240/ccd6f6?text=AK" alt="Akshay Katageri" class="w-full h-full object-cover">
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: About Me (no photo here)-->
+        <!-- Section 2: About Me -->
         <section id="about" class="py-24 min-h-screen flex items-center">
             <div class="w-full">
                 <h2 class="text-4xl font-bold mb-12 text-center md:text-left reveal">
@@ -113,16 +170,20 @@
                 </h2>
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <!-- Text Content -->
-                    <div class="md:w-3/5">
+                    <div class="w-full max-w-4xl"> <!-- Updated classes from md:w-3/5 -->
                         <p class="text-lg text-light mb-4 reveal">
                             Hello! I'm Akshay, a Generative AI Engineer based in Jersey City, NJ. With 4 years of expertise in advanced AI, I specialize in delivering production-ready solutions that reduce costs, speed up delivery, and boost accuracy.
                         </p>
                         <p class="text-lg text-light mb-4 reveal" style="transition-delay: 100ms;">
-                            I'm recognized for building safe and observable AI workflows that earn executive and stakeholder trust. As a proven cross-functional collaborator, I excel at translating deep technical skills into business impact that resonates with executives, clients, and stakeholders.
+                            I'm recognized for building safe and observable AI workflows that earn executive and stakeholder trust. 
+                        </p>
+                        <p class="text-lg text-light mb-4 reveal" style="transition-delay: 100ms;">
+                            As a proven cross-functional collaborator, I excel at translating deep technical skills into business impact that resonates with executives, clients, and stakeholders.
                         </p>
                         <p class="text-lg text-light mb-8 reveal" style="transition-delay: 200ms;">
                             My focus is on multi-agent systems, RAG, and creating efficient, scalable AI infrastructures.
                         </p>
+                        
                         <!-- View Resume Button -->
                         <button 
                           onclick="document.getElementById('resumeModal').style.display='block'"
@@ -130,6 +191,8 @@
                           style="transition-delay: 300ms;">
                           View Resume
                         </button>
+
+                        <!-- DEVELOPER NOTE: For the 'View Resume' button to work, you MUST place your 'Akshay-Katageri-Resume.pdf' file in the same directory as this HTML file. -->
                         <!-- Modal Viewer for Resume -->
                         <div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10,25,47,0.95); z-index:9999;">
                           <div style="position:absolute; top:20px; right:40px;">
@@ -147,33 +210,243 @@
                                  style="width:80vw; height:85vh; position:absolute; top:50px; left:50%; transform:translateX(-50%); border-radius:8px; box-shadow:0 0 24px #0a192f;">
                         </div>
                     </div>
+                    
+                    <!-- Profile Picture (Removed as requested) -->
                 </div>
             </div>
         </section>
 
-        <!-- ... All other sections (Skills, Experience, Projects, Education, Contact) remain unchanged ... -->
-        <!-- Please reuse your original HTML for these, only the Home/About/photo/modal code has changed per your request. -->
-
         <!-- Section 3: Skills -->
-        <!-- (copy your previous code unchanged) -->
+        <section id="skills" class="py-24 min-h-screen flex items-center">
+            <div class="w-full">
+                <h2 class="text-4xl font-bold mb-12 text-center reveal">
+                    <span class="text-accent">02.</span> Technical Skills
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Skill Card 1 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal">
+                        <h3 class="text-xl font-bold text-accent mb-4">Agent Architecture</h3>
+                        <ul class="list-disc list-inside text-light space-y-1">
+                            <li>LangGraph, CrewAI, AutoGen</li>
+                            <li>OpenAI Assistants & Agents SDK</li>
+                            <li>Google ADK</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 2 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal" style="transition-delay: 50ms;">
+                        <h3 class="text-xl font-bold text-accent mb-4">Protocols & Orchestration</h3>
+                        <ul class="list-disc list-inside text-light space-y-1">
+                            <li>MCP servers/clients</li>
+                            <li>Multi-Agent Systems</li>
+                            <li>Multimodal AI</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 3 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal" style="transition-delay: 100ms;">
+                        <h3 class="text-xl font-bold text-accent mb-4">RAG & Memory</h3>
+                        <ul class="list-disc list-inside text-light space-y-1">
+                            <li>Haystack, LlamaIndex Pipelines</li>
+                            <li>Hybrid Retrieval, RRF Rerankers</li>
+                            <li>Multi-hop QA & Memory</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 4 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal" style="transition-delay: 150ms;">
+                        <h3 class="text-xl font-bold text-accent mb-4">Serving & Performance</h3>
+                        <ul class="list-disc list-inside text-light space-y-1">
+                            <li>VLLM, TensorRT-LLM/Triton</li>
+                            <li>ONNX Runtime/TGI</li>
+                            <li>FlashAttention-2, KV-Cache</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 5 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal" style="transition-delay: 200ms;">
+                        <h3 class="text-xl font-bold text-accent mb-4">Evaluation & Observability</h3>
+                        <ul class="list-disc list-inside text-light space-y-1">
+                            <li>LangSmith/Langfuse, Arize Phoenix</li>
+                            <li>RAGAS/TruLens</li>
+                            <li>Adversarial Testing</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 6 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal" style="transition-delay: 250ms;">
+                        <h3 class="text-xl font-bold text-accent mb-4">Systems & MLOps</h3>
+                        <ul class="list-disc list-inside text-light space-y-1">
+                            <li>Scikit-learn, PyTorch, Tensorflow</li>
+                            <li>Docker/Kubernetes, CI/CD</li>
+                            <li>Cloud (AWS, GCP, Azure)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Section 4: Experience -->
-        <!-- (copy your previous code unchanged) -->
+        <section id="experience" class="py-24 min-h-screen">
+            <h2 class="text-4xl font-bold mb-12 text-center md:text-left reveal">
+                <span class="text-accent">03.</span> Work Experience
+            </h2>
+            <div class="space-y-12">
+                
+                <!-- Experience 1 -->
+                <div class="timeline-item reveal">
+                    <h3 class="text-2xl font-bold text-accent mb-1">GenAI Engineer</h3>
+                    <h4 class="text-xl font-medium text-light mb-2">KGS Technology Group, Inc.</h4>
+                    <p class="text-sm text-gray-400 mb-4">July 2025 - Present</p>
+                    <ul class="list-disc list-inside text-light space-y-2">
+                        <li>Redesigned Multi-Agent Workflows with LangGraph & TensorRT; cutting P95 latency 45% and cost 33%.</li>
+                        <li>Slashed integration lead time by 90% (3 weeks to 3 days) by developing secure MCP servers with CrewAI.</li>
+                        <li>Launched Hybrid Retrieval RAG, improving groundedness +12 pts and deflecting 22% of tickets.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item reveal">
+                    <h3 class="text-2xl font-bold text-accent mb-1">Data Analyst</h3>
+                    <h4 class="text-xl font-medium text-light mb-2">CloudData Technology</h4>
+                    <p class="text-sm text-gray-400 mb-4">August 2024 - July 2025</p>
+                    <ul class="list-disc list-inside text-light space-y-2">
+                        <li>Created LLM-driven pipelines with LangGraph, reducing forecast error 18% and false positives 27%.</li>
+                        <li>Shipped NL SQL analytics copilot, eliminating 12 hrs/week manual ELT and cutting time-to-insight 55%.</li>
+                        <li>Implemented Al observability & LlamaIndex RAG, improving data integrity +23% and cutting incidents 60%.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item reveal">
+                    <h3 class="text-2xl font-bold text-accent mb-1">Jr. Data Scientist</h3>
+                    <h4 class="text-xl font-medium text-light mb-2">Bharat Soft Solutions Pvt. Ltd. India</h4>
+                    <p class="text-sm text-gray-400 mb-4">Aug 2021 - April 2022</p>
+                    <ul class="list-disc list-inside text-light space-y-2">
+                        <li>Boosted F1 score 0.71 -> 0.83 and reduced latency 35% using TensorFlow pipelines and quantization.</li>
+                        <li>Scaled dataset 5x and reduced experiment cycle time 7 -> 3 days with reproducible MLflow workflows.</li>
+                        <li>Packaged models as Dockerized Flask microservices, reducing analyst review time 30%.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience 4 -->
+                <div class="timeline-item reveal">
+                    <h3 class="text-2xl font-bold text-accent mb-1">Jr. Data Scientist</h3>
+                    <h4 class="text-xl font-medium text-light mb-2">Connection Loops Pvt. Ltd. India</h4>
+                    <p class="text-sm text-gray-400 mb-4">Sept 2020 - June 2021</p>
+                    <ul class="list-disc list-inside text-light space-y-2">
+                        <li>Owned SQL pipelines, reducing prep time 58% and stabilizing refresh reliability to 99.4%.</li>
+                        <li>Built scikit-learn baselines, improving AUC 0.74 -> 0.82 and enabling earlier case detection.</li>
+                        <li>Delivered KPI dashboards, shortening decision lead-time by 3 days.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Section 5: Projects -->
-        <!-- (copy your previous code unchanged) -->
+        <section id="projects" class="py-24 min-h-screen">
+            <h2 class="text-4xl font-bold mb-12 text-center md:text-left reveal">
+                <span class="text-accent">04.</span> Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Project 1 -->
+                <div class="bg-card p-6 rounded-lg shadow-lg flex flex-col justify-between reveal">
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent mb-3">Trip Planner - Multimodal, Multi-Agent Travel Copilot</h3>
+                        <p class="text-light mb-4">
+                            Built a travel copilot using CrewAI & LangGraph boosting user satisfaction to 97%. Improved planning speed by 4x with custom Haystack/LlamaIndex retrieval.
+                        </p>
+                        <p class="text-light text-sm font-medium">
+                            <span class="text-accent">Key Tech:</span> CrewAI, LangGraph, Haystack, LlamaIndex, vLLM, Speculative Decoding
+                        </p>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                        <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="text-light text-2xl hover:text-accent transition-colors">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a> -->
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-card p-6 rounded-lg shadow-lg flex flex-col justify-between reveal" style="transition-delay: 100ms;">
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent mb-3">Autonomous Delivery Agent - Route-Aware Ordering</h3>
+                        <p class="text-light mb-4">
+                            Deployed Autonomous Agents with MCP protocols and vLLM, increasing route efficiency by 48%. Quantized ONNX/TGI models, lowering compute costs by 35%.
+                        </p>
+                        <p class="text-light text-sm font-medium">
+                            <span class="text-accent">Key Tech:</span> MCP, vLLM, ONNX/TGI, PII Filtering, Audit Trails
+                        </p>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-card p-6 rounded-lg shadow-lg flex flex-col justify-between reveal" style="transition-delay: 200ms;">
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent mb-3">Universal Commerce Copilot - Chat-First Recommender</h3>
+                        <p class="text-light mb-4">
+                            Developed with OpenAI SDK & Vector search, lifting test checkouts by 3.2x. Raised recommendation accuracy to 72% by hybrid retrieval RAG.
+                        </or>
+                        <p class="text-light text-sm font-medium">
+                            <span class="text-accent">Key Tech:</span> OpenAI SDK, Vector Search, Hybrid RAG, Automated Checkout
+                        </p>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Section 6: Education -->
-        <!-- (copy your previous code unchanged) -->
+        <section id="education" class="py-24 min-h-screen flex items-center">
+            <div class="w-full">
+                <h2 class="text-4xl font-bold mb-12 text-center reveal">
+                    <span class="text-accent">05.</span> Education
+                </h2>
+                <div class="space-y-8 max-w-2xl mx-auto">
+                    <!-- Education 1 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal">
+                        <h3 class="text-2xl font-bold text-accent mb-1">Master's in Data Science</h3>
+                        <h4 class="text-xl font-medium text-light">Pace University, New York City, USA</h4>
+                    </div>
+                    <!-- Education 2 -->
+                    <div class="bg-card p-6 rounded-lg shadow-lg reveal" style="transition-delay: 100ms;">
+                        <h3 class="text-2xl font-bold text-accent mb-1">Bachelor's in Computer Science</h3>
+                        <h4 class="text-xl font-medium text-light">Savitribai Phule Pune University, Pune, India</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Section 7: Contact -->
-        <!-- (copy your previous code unchanged) -->
+        <section id="contact" class="py-24 text-center">
+            <h2 class="text-4xl font-bold mb-8 reveal">
+                <span class="text-accent">06.</span> Get In Touch
+            </h2>
+            <p class="text-lg text-light max-w-lg mx-auto mb-8 reveal" style="transition-delay: 100ms;">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!
+            </p>
+            <div class="flex space-x-8 justify-center mb-12 reveal" style="transition-delay: 200ms;">
+                <a href="https://www.linkedin.com/in/akshayy-katageri/" target="_blank" rel="noopener noreferrer" class="text-light text-4xl hover:text-accent transition-colors">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/akshayy1597" target="_blank" rel="noopener noreferrer" class="text-light text-4xl hover:text-accent transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akshayykatageri@gmail.com" target="_blank" rel="noopener noreferrer" class="text-light text-4xl hover:text-accent transition-colors">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            
+        </section>
 
     </main>
+
     <!-- Footer -->
     <footer class="py-6 text-center">
         <p class="text-sm text-light">Designed & Built by Akshay Katageri</p>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section');
@@ -181,9 +454,11 @@
             const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+
             // --- Mobile Menu Toggle ---
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+                // Toggle icon
                 const icon = mobileMenuButton.querySelector('i');
                 if (mobileMenu.classList.contains('hidden')) {
                     icon.classList.remove('fa-xmark');
@@ -193,12 +468,15 @@
                     icon.classList.add('fa-xmark');
                 }
             });
+
+            // --- Close mobile menu on link click ---
             function closeMobileMenu() {
                 mobileMenu.classList.add('hidden');
                 const icon = mobileMenuButton.querySelector('i');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
             }
+            
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -207,6 +485,8 @@
                     closeMobileMenu();
                 });
             });
+
+            // --- Smooth scrolling for desktop nav and logo ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 if (!anchor.classList.contains('nav-link-mobile')) {
                     anchor.addEventListener('click', function (e) {
@@ -217,30 +497,50 @@
                     });
                 }
             });
-            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.4 };
+
+            // --- Intersection Observer for Active Nav Link ---
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4 // 40% of the section must be visible
+            };
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const id = entry.target.getAttribute('id');
+                        
+                        // Remove active class from all
                         navLinks.forEach(link => {
                             link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${id}`) link.classList.add('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
                         });
                     }
                 });
             }, observerOptions);
-            sections.forEach(section => { observer.observe(section); });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // --- Intersection Observer for Reveal-on-Scroll ---
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        // Optional: unobserve after it's visible so it doesn't re-animate
+                        // revealObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { threshold: 0.1 }); // Trigger when 10% is visible
+
             document.querySelectorAll('.reveal').forEach(el => {
                 revealObserver.observe(el);
             });
         });
     </script>
+
 </body>
 </html>
